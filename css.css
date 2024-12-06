@@ -1,0 +1,302 @@
+  /* General Styles */
+  html {
+    scroll-behavior: smooth;
+}
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #222;
+    overflow-x: hidden;
+  }
+
+  /* Navbar Styles */
+  nav {
+    margin: 0%;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    padding: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 0 20px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #222;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 15px 0; /* Increased padding to ensure space for underline */
+    position: relative;
+    transition: all 0.3s ease;
+    display: inline-block; /* Ensure text is treated as a block element */
+  }
+
+  nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 0;
+    height: 2px;
+    background-color: #ffd468;
+    transition: width 0.3s ease-in-out;
+    z-index: -1; /* Put underline behind the text */
+  }
+
+  nav ul li a.active::after {
+    width: 100%; /* The underline expands when the section is active */
+  }
+
+  nav ul li a:hover {
+    transform: scale(1.1);
+    color: #e9c46a;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    text-align: center;
+    background: linear-gradient(45deg, #fff, #f0f0f0);
+  }
+
+  .hero h1 {
+    font-family: ;
+    font-size: 80px; /* Adjusted size */
+   margin: 0%;
+    display: inline-block;
+    white-space: nowrap;
+    text-align: center;
+    /* Add text outline effect */
+    text-shadow: 
+      -2px -2px 0 #fff,  
+      2px -2px 0 #fff,
+      -2px  2px 0 #fff,
+      2px  2px 0 #fff,  /* Creates a white outline effect */
+      0 0 5px white(0, 0, 0, 0.8); /* Optional: Adds a soft black glow */
+  }
+
+  .hero p {
+    font-size: 1em;
+    font-style: italic;
+  }
+
+  .cta-btn {
+    margin-top: 30px;
+    padding: 15px 25px;
+    background-color: #222;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.6s ease;
+  }
+
+  .cta-btn:hover {
+    background-color: #ffd876;
+    transform: scale(1.1);
+  }
+
+  /* Sections */
+
+    
+  .about {
+    margin: 0%;
+    padding: 50px 20px;
+   text-align: center;
+  }
+  .about-content{
+  display: flex;
+  align-items: center;  /* Aligns the image and text vertically */
+  justify-content: center;  /* Centers the content horizontally */
+  gap: 20px;
+
+  }
+  .about p {
+    border: #222;
+    max-width: 600px;  /* Limit text width for better readability */
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-align: justify;
+  
+  }
+  
+  .about img {
+    border-radius: 50%;  /* Makes the image round */
+    width: 350px;  /* Adjust the size as needed */
+    height: 350px;
+    object-fit: cover;  /* Ensures the image fills the circle without distortion */
+    margin-left: 20px;
+  }
+  /* General styles for the photo gallery */
+.photo-gallery {
+
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+/* Container for the images */
+.photo-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid layout */
+  gap: 20px; /* Space between images */
+  justify-items: center; /* Center the images horizontally */
+}
+
+/* Individual photo styling */
+.photo {
+  width: 80%;
+  height: auto;
+  border-radius: 10px; /* Optional: adds rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: adds shadow to the images */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds transition for hover effect */
+}
+
+/* Hover effect */
+.photo:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+}
+
+ section {
+    padding: 50px;
+    margin: 0px;
+    min-height: 100vh;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1.6s ease-out;
+    background-color: #f0f0f0;
+    color: #222;
+  }
+
+  section.visible {
+    opacity: 1; /* Make the section visible once in the viewport */
+  }
+
+  /* Footer */
+  footer {
+    margin: 0%;
+    padding: 20px;
+    background-color: #222;
+    text-align: center;
+    color: #fff;
+  }
+
+  footer a {
+    color: whitesmoke;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.6s ease;
+  }
+
+  footer a:hover {
+    color: #fff;
+  }
+
+  
+/* Contact Section */
+.contact {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.0);
+  width: 100%;
+  max-width: 700px;  /* Increased max width for better form spacing */
+  text-align: center;
+  margin: 0 auto;  /* Center the form horizontally */
+}
+
+.contact h1 {
+  margin-bottom: 0%;
+  padding: 0%;
+  font-size: 2.0em;
+  color: #ffd876;
+}
+
+.contact p {
+  font-size: 1.0em;
+  margin-bottom: 20px;
+ 
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;  /* Added gap between elements */
+}
+
+label {
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  padding: 12px;  /* Increased padding for better usability */
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1.1em;
+  transition: border 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border: 1px solid #ffd876;
+  outline: none;
+}
+
+.shoot-btn {
+  background-color: #ffd876;
+  color: white;
+  font-size: 1.2em;  /* Increased font size for visibility */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shoot-btn:hover {
+  background-color: #ffd876;
+}
+
+footer a {
+  color: #fff;
+  font-size: 1.5em;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #e9c46a;
+}
+
+footer i {
+  margin-right: 8px;
+}
+
